@@ -1,0 +1,13 @@
+diff -u --recursive a/lisp/emacs-lisp/comp.el b/lisp/emacs-lisp/comp.el
+--- a/lisp/emacs-lisp/comp.el	2023-06-10 06:29:35.000000000 -0400
++++ b/lisp/emacs-lisp/comp.el	2023-07-18 00:55:44.444344196 -0400
+@@ -4309,7 +4309,8 @@
+   (let ((comp-running-batch-compilation t)
+         (native-compile-target-directory
+             (if for-tarball
+-                (car (last native-comp-eln-load-path)))))
++                (car (last native-comp-eln-load-path))
++              native-compile-target-directory)))
+     (cl-loop for file in command-line-args-left
+              if (or (null byte+native-compile)
+                     (cl-notany (lambda (re) (string-match re file))
