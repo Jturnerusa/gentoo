@@ -230,6 +230,17 @@ _ELISP_EMACS_VERSION=""
 # @DESCRIPTION:
 # Output version of currently active Emacs.
 
+# @ECLASS_VARIABLE: ELNCACHE
+# @DESCRIPTION:
+# Directory to install natively compiled elisp binaries into.
+#
+# @native-comp-version-dir@ is an Emacs generated directory
+# that it looks for compiled files in during runtime.
+# Different versions of Emacs will have a different value
+# for native-comp-version-dir which allows having compiled files
+# for multiple versions of Emacs simultaneously.
+ELNCACHE=/usr/@libdir@/emacs/eln-cache/@native-comp-version-dir@
+
 elisp-emacs-version() {
 	local version ret tmout="timeout -k 5 55"
 	# Run without timeout if the command is not available
