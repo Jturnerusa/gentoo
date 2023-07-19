@@ -63,6 +63,16 @@
 # Space separated list of Texinfo sources.  Respective GNU Info files
 # will be generated in src_compile() and installed in src_install().
 
+# @ECLASS_VARIABLE: NATIVECOMP
+# @DESCRIPTION:
+# Toggle building and installing natively compiled Elisp binaries.
+NATIVECOMP=1
+
+# @ECLASS_VARIABLE: NATIVECOMP_BUILD_DIR
+# @DESCRIPTION:
+# Directory that Emacs writes compiled Elisp files to.
+NATIVECOMP_BUILD_DIR=${T}/eln-cache
+
 inherit elisp-common
 
 case ${EAPI} in
