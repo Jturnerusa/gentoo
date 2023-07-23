@@ -162,7 +162,7 @@ RDEPEND+=" ${IDEPEND}"
 EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${EMACS_SUFFIX}-gentoo.el"
 
-PATCHES=( "${FILESDIR}/emacs-${PV}-respect-native-compile-target-directory.diff" )
+PATCHES=( "${FILESDIR}/emacs-${PV}-distro-native-batch-compile.patch" )
 
 src_prepare() {
 	if [[ ${PV##*.} = 9999 ]]; then
