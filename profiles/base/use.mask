@@ -85,3 +85,8 @@ prelude
 # These are specific to Mac OS X
 aqua
 coreaudio
+
+# John Turner <jturnerusa+gentoo@gmail.com>
+# Some Emacs packages' ebuilds may need changes to be
+# compatible with this use flag.
+native-compilation
